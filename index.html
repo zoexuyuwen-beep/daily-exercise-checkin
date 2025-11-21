@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Exercise Check-in</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💪 Daily Exercise Check-in</h1>
+        <p class="subtitle">Track your daily fitness journey</p>
+        
+        <div class="date-display" id="dateDisplay"></div>
+
+        <form id="exerciseForm">
+            <div class="form-group">
+                <label for="exerciseType">Exercise Type</label>
+                <select id="exerciseType" name="exerciseType" required>
+                    <option value="">Select an exercise...</option>
+                    <option value="running">Running</option>
+                    <option value="cycling">Cycling</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="weightlifting">Weightlifting</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="walking">Walking</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Duration (minutes)</label>
+                <input type="number" id="duration" name="duration" min="1" placeholder="e.g., 30" required>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" name="notes" placeholder="How did you feel? Any achievements?"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-primary">Submit Check-in</button>
+                <button type="button" id="clearButton" class="btn-secondary">Clear</button>
+            </div>
+        </form>
+
+        <div id="submittedExercises" class="hidden">
+            <h2 class="submitted-section-title">Today's Exercises</h2>
+            <div id="exercisesList"></div>
+        </div>
+
+        <div class="nav-link">
+            <a href="history.html">View Check-in History →</a>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+

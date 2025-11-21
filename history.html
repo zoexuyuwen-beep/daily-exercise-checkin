@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in History - Daily Exercise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-link nav-link-back">
+            <a href="index.html" aria-label="Back to Check-in">←</a>
+        </div>
+        <h1>📊 Check-in History</h1>
+        <p class="subtitle">View and analyze your exercise journey</p>
+
+        <div class="stats-container" id="statsContainer">
+            <!-- Stats will be populated by JavaScript -->
+        </div>
+
+        <div class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label for="filterDate">Date:</label>
+                <input type="date" id="filterDate">
+                
+                <label for="filterExercise">Exercise Type:</label>
+                <select id="filterExercise">
+                    <option value="">All Types</option>
+                    <option value="running">Running</option>
+                    <option value="cycling">Cycling</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="weightlifting">Weightlifting</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="walking">Walking</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button class="btn-clear" id="clearFiltersBtn" type="button">Clear Filters</button>
+            </div>
+        </div>
+
+        <div id="historyList" class="history-list">
+            <!-- History items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>
+
